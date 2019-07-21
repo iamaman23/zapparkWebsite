@@ -1,0 +1,45 @@
+#first{
+    background-image: url("../../assets/images/wallpaperscraft-com-4k-best-of-download-wallpaper-3840x2160-porsche-white-wheels-4k-uhd-16-9-hd-of-wallpaperscraft-com-4k.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    opacity: 0.8;
+    background-position: center center;
+}
+.whoarewe,h2{
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px !important;
+    color: black;
+    font-weight: bold;
+    opacity: 1 !important;
+}
+.details{
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+}
+.formClass{
+    text-align: center;
+}
+.cardTitle{
+    text-align: center;
+    font-size: 2rem;
+}
+.myClass{
+    text-align: center !important;
+}
+#navbar{
+    animation-duration: 2s;
+}
+#imageText{
+    animation-delay: 2s;
+}
+#work{
+    animation-duration: 3s;
+}
+#myImage{  
+    width: 100%;
+    height:20vh;
+}

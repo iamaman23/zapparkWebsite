@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark animated slideInLeft sticky-top" id="navbar">
+  <a class="navbar-brand" style="color: white">ZapPark</a>
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#first">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#objective">Objective</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#phoneImage">Mobile App</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#myImage">Smart Cities</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" (keydown)="call($event)">
+      <button *ngFor="let item of places" type="button" class="btn btn-link" (click)="open(content,item)">{{item.name}}</button>
+    </form>
+  </div>
+</nav>
+ <div id="first">
+    <div class="container animated bounceIn" id="imageText">
+      <div class="row">
+        <div class="col">
+          <h2 class="whoarewe">WHO ARE WE?</h2><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 details">
+          <p>ZapPark is a one stop solution to all your parking problems. Our aim is to provide Hassle
+            Free Parking Solution to our customers. Simply look if parking is available at the desired place
+            and take advantage of our real time updates to reserve a parking spot for yourself.  
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+<div style="background-color: lightgray" id="objective"><br> 
+    <div class="row">
+      <div class="col-md-4">
+          <div class="card border-dark ml-3 mr-3 mb-3" style="max-width: 25rem;">
+              <div class="card-header" style="font-size: 25px;"><strong>The Problem</strong></div>
+              <div class="card-body text-dark">
+                <h5 class="card-title">What problem are we trying to solve?</h5>
+                <p class="card-text">Due to the ever increasing number of vehicles today, it has become very difficult
+                  for any person to find a parking spot. 
+                </p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-5">
+          <div class="card border-dark ml-3 mr-3 mb-3" style="max-width: 40rem;">
+              <div class="card-header"  style="font-size: 25px;"><strong> Our Solution</strong></div>
+              <div class="card-body text-dark">
+                <h5 class="card-title">The Solution.</h5>
+                <p class="card-text">At ZapPark we intend to provide you the best and hassle free parking solutions.
+                  Just look for the available parking spots at your desired location and book them
+                  instantly through our app.
+                </p>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>
+<ng-template #content let-modal>
+<div class="modal-header">
+  <h4 class="modal-title">{{modalTitle}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <h5>Status: {{availability}}</h5><br>
+  <h5>Parking Spots: {{spots}}</h5><br>
+  <h5>Price: Rs. {{price}}</h5>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+</div>
+</ng-template>
+<div id="phoneImage">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="../../assets/images/IMG_1457_iphone8gold_portrait.png" class="img-fluid">
+    </div>
+    <div class="col-md-4">
+      <img src="../../assets/images/IMG_1458_iphone8gold_portrait.png" class="img-fluid">
+    </div>
+    <div class="col-md-4">
+      <img src="../../assets/images/IMG_1467_iphone8gold_portrait.png" class="img-fluid">
+    </div>
+  </div>
+</div>
+<div id="myImage">
+  <div class="row">
+    <div class="col">
+      <img src="../../assets/images/data.png" class="img-fluid">
+    </div>
+  </div>
+</div> 
